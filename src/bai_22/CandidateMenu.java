@@ -79,9 +79,9 @@ public class CandidateMenu {
                 c = new Fresher(id, firstName, lastName, address, phone, email, brithDate, gradDate, rank, edu);
             } else {
                 String major = v.getString("Major: ");
-                int semester = v.getInt("Semester: ", 1, 12);
+                String semester = v.getString("Semester: ");
                 String uni = v.getString("Unversity name: ");
-                c = new Intern(id, firstName, lastName, address, phone, email, brithDate, major, major, uni);
+                c = new Intern(id, firstName, lastName, address, phone, email, brithDate,major, semester, uni);
 
             }
             manager.addCandidate(c);
